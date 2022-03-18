@@ -1,0 +1,248 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;700&display=swap');
+
+@import '_variables';
+
+@import '_mixins';
+*{
+    font-family: 'Open Sans', sans-serif;
+    padding: 0;
+    margin: 0;
+}
+
+.container{
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.row{
+    margin: 0 -15px;
+}
+
+body{
+    background-color: #ecf0f1;
+}
+
+.login{
+    form{
+        margin-top: 150px;
+        background-color: white;
+        padding: 30px;
+        border-radius: 10px;
+        .form-group{
+            margin-bottom: 15px;
+        }
+        label{
+            display: block;
+            margin-bottom: 5px
+        }
+        input{
+            @extend %input;
+        }
+        button{
+            @extend %primary-button;
+        }
+        .error-text{
+            color: $red;
+        }
+    }
+}
+
+header{
+    background-color: $color;
+    padding: 30px 0;
+    .content{
+        display: flex;
+        align-items: center;
+        justify-content: end;
+        .logo{
+            color: white;
+            font-weight: bold;
+        }
+        ul{
+            margin-right: 15px;
+            li{
+                display: inline-block;
+                a{
+                    color: white;
+                    text-decoration: none;
+                    font-size: 16px;
+                    margin-left: 10px;
+                }
+            }
+        }
+    }
+    
+}
+
+
+
+.form{
+    background: white;
+    margin: 50px 0;
+    padding: 25px;
+    border-radius: 10px;
+
+    h2{
+        color: $primary-color;
+        margin-bottom: 25px;
+    }
+
+    .form-group{
+        margin-bottom: 15px;
+        label{
+            display: block;
+            margin-bottom: 10px;
+        }
+
+        input,
+        textarea,
+        select{
+            @extend %input;
+        }
+
+        button{
+            @extend %primary-button;
+        }
+    }
+}
+
+
+.list{
+    margin: 50px 0;
+    .header{
+        display: flex;
+        align-items: center;
+        margin-bottom: 25px;
+
+        h2{
+            color: $primary-color;
+            
+        }
+
+        a{
+            @extend %primary-button;
+            display: inline-block;
+            text-decoration: none;
+            margin-left: 15px;
+        }
+    }
+    
+
+    .items{
+        .item{
+            background: white;
+            border-radius: 10px;
+            padding: 20px;
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            a{
+                @extend %primary-button;
+                text-decoration: none;
+                font-size: 14px;
+                padding: 5px 10px;
+            }
+            form{
+                display: inline-block;
+                button{
+                    @extend %primary-button;
+                    text-decoration: none;
+                    font-size: 14px;
+                    padding: 5px 10px;
+                }
+            }
+        }
+    }
+}
+
+.categories_sec{
+    margin-top: 40px;
+    margin-left: 200px;
+    .cat_header{
+        display: flex;
+        a{
+            margin-left: 20px;
+            @extend %primary-button;
+            font-size: 13px;
+            text-decoration: none;
+        }
+    }
+    .cat_box{
+        width: 750px;
+        padding-left: 20px;
+        border-radius: 10px;
+        background-color: white;
+        height: 80px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 25px;
+        .action{
+            left: 775px;
+            display: flex;
+            position: absolute;
+            button{
+                margin-left: 20px;
+                @extend %primary-button;
+            }
+            a{
+                margin-left: 20px;
+                @extend %primary-button;
+                font-size: 13px;
+                text-decoration: none;
+            }
+        }
+    }
+}
+
+.news_sec{
+    margin-top: 40px;
+    margin-left: 200px;
+    .news_header{
+        display: flex;
+        a{
+            margin-left: 20px;
+            @extend %primary-button;
+            font-size: 13px;
+            text-decoration: none;
+        }
+    }
+    table{
+        background-color: white;
+        margin-top: 50px;
+        margin-bottom: 50px;
+        .action{
+            width: 150px;
+        }
+        a{
+            @extend %primary-button;
+            text-decoration: none;
+            font-size: 14px;
+            padding: 5px 10px;
+        }
+        form{
+            display: inline-block;
+            button{
+                @extend %primary-button;
+                text-decoration: none;
+                font-size: 14px;
+                padding: 5px 10px;
+            }
+        }
+    }
+
+    table, td, th {  
+        border: 1px solid #ddd;
+        text-align: left;
+    }
+      
+    table {
+        border-collapse: collapse;
+        width: 100%;
+    }
+      
+    th, td {
+        padding: 15px;
+    }
+}
